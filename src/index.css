@@ -1,13 +1,218 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Roboto", sans-serif;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 12px;
+    width: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+/* -------------------------------------
+                SEARCH
+--------------------------------------*/
+.search-box{
+    width: 100%;
+    border-radius: 5px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #256EEB;
+}
+.search-box input{
+    flex-grow: 1;
+    padding: 14px 22px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    min-width: 0;
+}
+.search-btn i{
+    font-size: 15px;
+}
+.search-btn-text{
+    margin-left: 5px;
+    font-size: 16px;
+}
+.search{
+    margin-bottom: 45px;
+}
+
+
+
+/* -------------------------------------
+                MAIN
+--------------------------------------*/
+.content{
+    padding-bottom: 50px;
+}
+.content-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+.content-main{
+    flex-grow: 1;
+}
+.content-side{
+    width: 230px;
+    min-width: 230px;
+}
+.content-main-title{
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+.content-main-list{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.content-sidebar-title{
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 25px;
+    margin-top: 0;
+}
+.content-side-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    gap: 25px;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 36px;
+}
+.content-side-list-item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.content-side-list-item--title{
+    margin-top: 7px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+}
+.content-side-list-item--text{
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0;
+}
+.content-side-footer{
+    padding-top: 36px;
+    display: flex;
+    flex-direction: column;
+}
+.content-side-footer--item{
+    color: #C4C4C4;
+    margin: 0;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 16px;
+}
+.content-side-footer--item-link{
+    color: #000;
+    font-size: 14px;
+    margin-bottom: 8px;
+    line-height: 1;
+    text-decoration: none;
+}
+
+
+
+/* -------------------------------------
+                PRODUCT
+--------------------------------------*/
+.content-product{
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    gap: 30px;
+}
+.content-product--left{
+    flex-basis: 50%;
+}
+.content-product--right{
+    flex-basis: 50%;
+}
+.content-product-title, .content-product-price{
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+.content-product-img{
+    width: 100%;
+}
+.content-product-text{
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 30px;
+}
+
+/* -------------------------------------
+                RESPONSIVE
+--------------------------------------*/
+@media (max-width: 1200px){
+    .container{
+        max-width: 970px;
+    }
+}
+
+@media (max-width: 992px){
+    .container{
+        max-width: 780px;
+    }
+    .content-box{
+        flex-direction: column;
+    }
+    .content-main{
+        width: 100%;
+    }
+    .content-side{
+        width: 100%;
+        min-width: none;
+    }
+    .content-product{
+        flex-direction: column;
+        width: 100%;
+    }
+    .content-product--left{
+        flex-basis: 100%;
+        width: 100%;
+    }
+    .content-product--right{
+        flex-basis: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 786px){
+    .container{
+        max-width: 100%;
+    }
+    .search-btn-text{
+        display: none;
+    }
+}
+
+@media (max-width: 480px){
+    .content-main-title{
+        text-align: center;
+    }
 }

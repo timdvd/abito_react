@@ -1,0 +1,54 @@
+/* -------------------------------------
+                HEADER
+--------------------------------------*/
+.header{
+    position: relative;
+    width: 100%;
+    padding: 30px 0;
+}
+.header-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-logo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.btn{
+    line-height: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px 15px 10px 15px;
+    border: none;
+    cursor: pointer;
+
+}
+.btn-outline{
+    background-color: transparent;
+}
+.btn-primary{
+    background-color: #256EEB;
+    color: #fff;
+    border-radius: 5px;
+}
+.header-burger{
+    display: none;
+    cursor: pointer;
+}
+
+/* -------------------------------------
+                RESPONSIVE
+--------------------------------------*/
+
+
+@media (max-width: 786px){
+    .header-burger{
+        display: block;
+        cursor: pointer;
+    }
+    .header-controls{
+        display: none;
+    }
+}
